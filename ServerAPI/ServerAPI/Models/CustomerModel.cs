@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace ServerAPI.Models
 {
-    public class CustomerModel
+    public class CustomerModel : IdentityUser
     {
-        [Key]
-        public int CustomerId { get; set; }
         
         [Required]
         public string CustomerName { get; set; }

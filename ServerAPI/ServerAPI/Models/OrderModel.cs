@@ -21,7 +21,7 @@ namespace ServerAPI.Models
         [Required]
         public int CustomerId { get; set; }
 
-        [ForeignKey("CustomerId")]
+        [ForeignKey("Id")]
         public CustomerModel? Customer { get; set; }
     }
 }

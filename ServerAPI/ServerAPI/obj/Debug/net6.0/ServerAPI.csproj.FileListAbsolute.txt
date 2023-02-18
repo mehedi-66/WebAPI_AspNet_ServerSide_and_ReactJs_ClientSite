@@ -80,3 +80,7 @@ H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\obj\Debug\net6.0\refint\ServerA
 H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\obj\Debug\net6.0\ServerAPI.pdb
 H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\obj\Debug\net6.0\ServerAPI.genruntimeconfig.cache
 H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\obj\Debug\net6.0\ref\ServerAPI.dll
+H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\bin\Debug\net6.0\AutoMapper.dll
+H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+H:\ASP_Project\TaskOfGenuine\ServerAPI\ServerAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
