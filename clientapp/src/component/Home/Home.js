@@ -7,7 +7,18 @@ function Home() {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    fetch("https://www.pqstec.com/InvoiceApps/values/GetProductListAll")
+
+    let jwttoken = sessionStorage.getItem('jwttoken');
+    if(jwttoken === '' || jwttoken === null)
+    {
+      navigate('/signin');
+    }
+
+    fetch("https://www.pqstec.com/InvoiceApps/values/GetProductListAll", {
+      headers: {
+        'Authorization': 'Bearer ' + jwttoken
+      }
+    })
       .then((res) => {
         return res.json();
       })

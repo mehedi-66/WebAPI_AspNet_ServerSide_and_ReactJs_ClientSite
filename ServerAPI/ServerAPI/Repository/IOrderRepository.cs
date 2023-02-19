@@ -6,7 +6,7 @@ namespace ServerAPI.Repository
     {
         Task<List<OrderModel>> GetAllOrders();
 
-        Task<List<OrderModel>> GetAllOrdersId(int customerId);
+        Task<List<OrderModel>> GetAllOrdersId(string email);
 
         Task<int> AddOrder(OrderModel obj);
 

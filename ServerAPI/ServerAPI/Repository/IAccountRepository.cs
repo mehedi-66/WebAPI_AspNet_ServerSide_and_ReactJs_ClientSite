@@ -9,5 +9,7 @@ namespace ServerAPI.Repository
         Task<IdentityResult> SignUp(SignUpModel signUpModel);
 
         Task<string> Login(SignInModel sigInModel);
+
+       
     }
 }

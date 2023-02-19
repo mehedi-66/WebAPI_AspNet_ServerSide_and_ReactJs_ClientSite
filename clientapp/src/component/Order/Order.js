@@ -10,6 +10,7 @@ function Order()
 
 
   useEffect(() => {
+    
     fetch("https://www.pqstec.com/InvoiceApps/values/GetProductListAll")
       .then((res) => {
         return res.json();

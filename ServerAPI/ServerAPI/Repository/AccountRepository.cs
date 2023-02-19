@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using ServerAPI.Data;
 using ServerAPI.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,13 +13,15 @@ namespace ServerAPI.Repository
         private readonly UserManager<CustomerModel> _userManager;
         private readonly SignInManager<CustomerModel> _signInManager;
         private readonly IConfiguration _configuration;
+        private readonly DataContext _context;
 
         public AccountRepository(UserManager<CustomerModel>  userManager, 
-                SignInManager<CustomerModel> signInManager, IConfiguration configuration  )
+                SignInManager<CustomerModel> signInManager, IConfiguration configuration,  DataContext context  )
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
+            _context = context;
         }
 
         public async Task<IdentityResult> SignUp(SignUpModel signUpModel)
@@ -65,5 +68,7 @@ namespace ServerAPI.Repository
             return new JwtSecurityTokenHandler().WriteToken(token);
         
         }
+
+      
     }
 }

@@ -19,7 +19,7 @@ namespace ServerAPI.Models
         public int TotalAmount { get; set; }
 
         [Required]
-        public int CustomerId { get; set; }
+        public string Email { get; set; }
 
         [ForeignKey("Id")]
         public CustomerModel? Customer { get; set; }

@@ -22,7 +22,7 @@ namespace ServerAPI.Repository
                 OrderId = x.OrderId,
                 OrderDate = x.OrderDate,
                 OrderNo = x.OrderNo,
-                CustomerId = x.CustomerId,
+                Email = x.Email,
                 Quantity = x.Quantity,
                 UnitPrice = x.UnitPrice,
                 TotalAmount = x.TotalAmount,
@@ -32,15 +32,15 @@ namespace ServerAPI.Repository
             return records;
         }
 
-        public async Task<List<OrderModel>> GetAllOrdersId(int customerId)
+        public async Task<List<OrderModel>> GetAllOrdersId(string email)
         {
 
-            var records = await _context.orders.Where(x => x.CustomerId == customerId).Select(x => new OrderModel()
+            var records = await _context.orders.Where(x => x.Email == email).Select(x => new OrderModel()
             {
                 OrderId = x.OrderId,
                 OrderDate = x.OrderDate,
                 OrderNo = x.OrderNo,
-                CustomerId = x.CustomerId,
+                Email = x.Email,
                 Quantity = x.Quantity,
                 UnitPrice = x.UnitPrice,
                 TotalAmount = x.TotalAmount,
@@ -55,7 +55,7 @@ namespace ServerAPI.Repository
         {
             var order = new OrderModel()
             {
-                CustomerId = obj.CustomerId,
+                Email = obj.Email,
                 OrderNo = obj.OrderNo,
                 OrderDate = obj.OrderDate,
                 Quantity = obj.Quantity,

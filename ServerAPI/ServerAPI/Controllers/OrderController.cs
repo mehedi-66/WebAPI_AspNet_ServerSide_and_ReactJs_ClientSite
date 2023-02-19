@@ -28,7 +28,7 @@ namespace ServerAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById([FromRoute] int id)
+        public async Task<IActionResult> GetOrderById([FromRoute] string id)
         {
             var order = await _orderRespository.GetAllOrdersId(id);
 
